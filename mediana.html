@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediana</title>
+</head>
+<body>
+    <head>
+        <h1>Mediana</h1>
+    </head>
+    <main>
+        <section>
+            <h2>Calcular la mediana</h2>
+            <form action="">
+                <label for="InputMediana">Introduce tu elemento</label>
+                <input id="InputMediana" type="number" style="display: block;"/>
+                <button type="button" onclick="agregarUnElemento()">Agregar elemento</button>
+                <button type="button" onclick="calcularMediana()">Calcula la mediana</button>
+                <label for="" style="display: block;">Para eliminar un elemmento introdusca el numero de su posicion</label>
+                <button type="button" onclick="eliminarUnElemento()">Eliminar elemento</button>
+            </form>
+            <ol id="ListaDeElementos"></ol>
+            <p id="ResultMeadiana"></p>
+        </section>
+    </main>
+    <script src="./mediana.js"></script>
+</body>
+</html>
