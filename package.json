@@ -1,0 +1,19 @@
+{
+  "name": "cursopracticojs",
+  "version": "1.0.0",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Takeout85/curso-javascript.git"
+  },
+  "author": "T4k30ut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Takeout85/curso-javascript/issues"
+  },
+  "homepage": "https://github.com/Takeout85/curso-javascript#readme"
+}

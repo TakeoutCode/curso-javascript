@@ -1,0 +1,47 @@
+$Fuente1: 'Roboto', sans-serif;
+$Fuente2: 'Roboto Slab', serif;
+$color-fuente: #333333;
+$color-primario: #3f579a;
+$color-claro: #FFFFff;
+
+@use 'sass:math';
+
+@function calculateRem($size){
+	$remSize: math.div($size, 16px);
+	@return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+	line-height: calculateRem($size)*1.5;	
+}
+
+@mixin titulos($fuente) {
+	@if $fuente ==$Fuente1 {
+		font-family: $Fuente1;
+	} @else {
+		font-family: $Fuente2;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #58839b;
+    @include font-size(18px);
+    @include titulos($Fuente1);
+}
+
+main {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
