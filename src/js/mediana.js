@@ -6,7 +6,7 @@ function agregarUnElemento() {
 
     if(isNaN(medianaValue)) {
         const resultMediana = document.getElementById("ResultMeadiana");
-        resultMediana.innerHTML = "Por favor introdusca un valor"
+        resultMediana.innerHTML = "Por favor introdusca un valor";
     } else {
         list.push(medianaValue);
         const listaUl = document.getElementById("ListaDeElementos");
