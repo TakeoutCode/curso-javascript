@@ -1,0 +1,77 @@
+.header__figuras {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    h1 {
+        padding-top: 30px;
+        text-align: center;
+        @include font-size(26px);
+        @include titulos($Fuente2);
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .textContainer {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        justify-content: space-around;
+        a { 
+            color: $color-claro;    
+        }
+    }
+    .buttonContainer {
+        padding: 10px 15px;
+        
+    }
+
+}
+
+.formularios {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+}
+.formularios__cuadrado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    h2 {
+        text-align: center;
+        @include font-size(20px);
+        @include titulos($Fuente1);
+    }
+    form {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 10px 15px;
+        label{
+            @include font-size(16px);
+        }
+    }
+    
+
+}
+.formularios__trianguloE {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.formularios__trianguloI {
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.formularios__circulo {
+    width: 100%;
+    height: auto;
+    display: none;
+}
