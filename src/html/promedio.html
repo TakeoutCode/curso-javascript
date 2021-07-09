@@ -5,16 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promedio</title>
+    <link rel="stylesheet" href="../sass/styles.css">
 </head>
 <body>
-    <head>
-        <h1>Promedio</h1>
-    </head>
-    <main>
+    <header class="header-promedio">
+        <h1>Calcular Promedio</h1>
+        <a href="../../index.html">Inicio</a>
+    </header>
+    <main class="main-promedio">
         <section>
-
+            <form action="" class="formulario-promedio">
+                <label for="InputPromedio">Introduce tu elemento</label>
+                <input id="InputPromedio" type="number"/>
+                <div>
+                    <button type="button" onclick="agregarUnElemento()">Agregar elemento</button>
+                    <button type="button" onclick="calcularPromedio()">Calcula el promedio</button>
+                </div>
+                <label for="" style="display: block;">Para eliminar un elemmento introdusca el numero de su posicion</label>
+                <button type="button" onclick="eliminarUnElemento()">Eliminar elemento</button>
+            </form>
+            <ol id="ListaDeElementos"></ol>
         </section>
+        <p id="ResultPromedio"></p>
     </main>
-    <script src="./promedio.js"></script>
+    <script src="../js/promedio.js"></script>
 </body>
 </html>

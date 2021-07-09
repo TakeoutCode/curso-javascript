@@ -3,6 +3,7 @@ $Fuente2: 'Roboto Slab', serif;
 $color-fuente: #333333;
 $color-primario: #b163ff;
 $color-claro: #FFFFff;
+$color-secundario: #00ffff;
 
 @use 'sass:math';
 
@@ -64,6 +65,10 @@ main {
 }
 a {
     text-decoration: none;
+    color: #000000;
+}
+a:hover {
+    color: $color-claro;
 }
 
 input {
@@ -82,11 +87,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 button[type=button]{
+    height: auto;
     padding: 4px;
     margin-top: 10px;
     border-radius: 10px;
-    border: 1 solid $color-claro;
-    background: linear-gradient(90deg, #755bea, #ff72c0);
+    border: 1 solid $color-fuente;
+    background-color: $color-secundario;
     @include font-size(12px);
 }
 

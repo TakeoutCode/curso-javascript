@@ -5,7 +5,7 @@
     h1 {
         padding-top: 30px;
         text-align: center;
-        @include font-size(26px);
+        @include font-size(28px);
         @include titulos($Fuente2);
     }
     nav {
@@ -18,9 +18,8 @@
         max-width: 600px;
         display: flex;
         justify-content: space-around;
-        a { 
-            color: $color-claro;    
-        }
+        align-items: center;
+        @include font-size(20px);
     }
     .buttonContainer {
         padding: 10px 15px;
@@ -29,14 +28,17 @@
 
 }
 
-.formularios {
+.formulariosContainer {
     width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-items: center;
+    margin-top: 50px;
 }
-.formularios__cuadrado {
-    display: flex;
+
+.formularios {
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -45,7 +47,7 @@
     margin-top: 20px;
     h2 {
         text-align: center;
-        @include font-size(20px);
+        @include font-size(22px);
         @include titulos($Fuente1);
     }
     form {
@@ -54,24 +56,51 @@
         flex-direction: column;
         padding: 10px 15px;
         label{
-            @include font-size(16px);
+            @include font-size(18px);
         }
     }
     
 
 }
-.formularios__trianguloE {
-    width: 100%;
-    height: auto;
-    display: none;
+
+.formularios.formularios__cuadrado {
+    display: flex;
 }
-.formularios__trianguloI {
-    width: 100%;
-    height: auto;
-    display: none;
+
+.cuadrado{
+    width: 100px; 
+    height: 100px; 
+    background: $color-secundario;
 }
-.formularios__circulo {
-    width: 100%;
-    height: auto;
+.trianguloE {
     display: none;
+    width: 0;
+    height: 0;
+    border-right: 100px solid transparent;
+    border-top: 100px solid transparent;
+    border-left: 100px solid transparent;
+    border-bottom: 100px solid $color-secundario;
+}
+
+.trianguloI {
+    display: none;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 150px solid $color-secundario;
+}
+.circulo {
+    display: none;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: $color-secundario;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }

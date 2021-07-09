@@ -1,0 +1,39 @@
+.header-mediana {
+    text-align: center;
+    h1 {
+        padding-top: 30px;
+        @include font-size(28px);
+        @include titulos($Fuente2);
+    }
+    a {
+        padding-top: 20px;
+        @include font-size(22px);
+    }
+}
+
+.formulario-mediana {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    label {
+        margin-top: 20px;
+        text-align: center;
+        @include font-size(22px);
+    }
+}
+
+.main-mediana section {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-items: center;
+
+}
+
+p {
+    padding: 40px 0;
+    text-align: center;
+    @include font-size(20px);
+}

@@ -199,6 +199,18 @@ function calcularAreaCirculo() {
 }
 
 
-
+document.querySelectorAll(".elegirCalculadora").forEach((e) => {
+    e.addEventListener("click", async(el) => {
+        document.querySelectorAll(".buscar").forEach(e => {
+            e.style.display = "none";
+        });
+        document.getElementById("Results").innerHTML = "";
+        let id = await el.target.getAttribute("id");
+        document.querySelectorAll(`.formularios__${id}`).forEach(e => {
+            e.style.display = "flex";
+        });
+       
+    });
+});
 
 

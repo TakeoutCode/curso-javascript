@@ -2,10 +2,10 @@ const list = [];
 
 function agregarUnElemento() {
     const inputMediana = document.getElementById("InputMediana")
-    const medianaValue = parseInt(inputMediana.value);
+    const medianaValue = parseFloat(inputMediana.value);
 
     if(isNaN(medianaValue)) {
-        const resultMediana = document.getElementById("ResultMeadiana");
+        const resultMediana = document.getElementById("ResultMediana");
         resultMediana.innerHTML = "Por favor introdusca un valor";
     } else {
         list.push(medianaValue);
@@ -17,51 +17,44 @@ function agregarUnElemento() {
         const numeroDeLi = document.getElementsByTagName("LI");
         listaLi.id = `IdNew${numeroDeLi.length}`;
 
-        const resultMediana = document.getElementById("ResultMeadiana");
+        const resultMediana = document.getElementById("ResultMediana");
         resultMediana.innerHTML = "";
     }
 }
 
 function eliminarUnElemento() {
     const inputMediana = document.getElementById("InputMediana")
-    const medianaValue = parseInt(inputMediana.value);
+    const medianaValue = parseFloat(inputMediana.value);
 
     if(isNaN(medianaValue)) {
-        const resultMediana = document.getElementById("ResultMeadiana");
-        resultMediana.innerHTML = "Por favor introdusca un valor"
+        const resultMediana = document.getElementById("ResultMediana");
+        resultMediana.innerHTML = "Por favor introdusca un valor";
     }else {
         const posicionElemento = `IdNew${medianaValue}`;
         const ubicarId = document.getElementById(posicionElemento);
-        console.log(ubicarId);
 
         if(ubicarId != null){
-            list.splice(medianaValue - 1);
-
-            const listaUl = document.getElementById("ListaDeElementos");
+            list.splice(medianaValue - 1, 1);
+            let listaUl = document.getElementById("ListaDeElementos");
             const posicionElemento = `IdNew${medianaValue}`;
             const elementoEliminar = document.getElementById(posicionElemento);
-            console.log(elementoEliminar);
             listaUl.removeChild(elementoEliminar);
         
-            const numeroDeLi = document.getElementsByTagName("LI").length;
-            console.log(numeroDeLi);
-
+            let numeroDeLi = document.getElementsByTagName("LI").length;
 
             for (let i = 0; i <= numeroDeLi ; i++) {
-                console.log(i);
                 if(medianaValue <= i){
                     const posicionElemento = `IdNew${i + 1}`;
                     const renombrarId = document.getElementById(posicionElemento);
-                    console.log(renombrarId);
                     renombrarId.setAttribute("id", `IdNew${i}`);
 
                 }
             
             }
-            const resultMediana = document.getElementById("ResultMeadiana");
+            const resultMediana = document.getElementById("ResultMediana");
             resultMediana.innerHTML = "";
         } else {
-            const resultMediana = document.getElementById("ResultMeadiana");
+            const resultMediana = document.getElementById("ResultMediana");
             resultMediana.innerHTML = "Por favor introdusca un valor valido";
         }
         
@@ -83,14 +76,16 @@ function calcularPromedio(list1) {
 
 
 function calcularMediana() {
-    console.log(list)
     let mediana;
     const medianaOrdenada = list.sort(function (a, b) {return a - b});
-    console.log(medianaOrdenada);
     const mitadLista = parseInt(list.length / 2);
-    const resultMediana = document.getElementById("ResultMeadiana");
+    const resultMediana = document.getElementById("ResultMediana");
     
-    if(medianaOrdenada.length % 2 === 0) {
+
+    if (0 >= list ) {
+        const resultMediana = document.getElementById("ResultMediana");
+        resultMediana.innerHTML = "Por favor introdusca un valor";
+    } else if(medianaOrdenada.length % 2 === 0) {
         const element1 = list[mitadLista - 1];
         const element2 = list[mitadLista];
         
@@ -99,11 +94,11 @@ function calcularMediana() {
             element2,
         ]);
         mediana = promedio;
-        resultMediana.innerHTML = `la mediana es ${mediana}`;
-        return mediana;
+        resultMediana.innerHTML = `La mediana es ${mediana}`;
+  
     } else {
         mediana = list[mitadLista];
-        resultMediana.innerHTML = `la mediana es ${mediana}`;
-        return mediana;
+        resultMediana.innerHTML = `La mediana es ${mediana}`;
+  
     }
 }

@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Moda</title>
+    <link rel="stylesheet" href="../sass/styles.css">
 </head>
 <body>
-    <header>
-        <h1>MODA</h1>
+    <header class="header-moda">
+        <h1>Calcular moda</h1>
+        <a href="../../index.html">Inicio</a>
     </header>
-    <main>
+    <main class="main-moda">
         <section>
-            <h2>
-                Calcular la moda
-            </h2>
-            <form action="">
-                <label for=""></label>
-                <input type="number">
-                <button type="button"></button>
+            <form action="" class="formulario-moda">
+                <label for="InputModa">Introduce tu elemento</label>
+                <input id="InputModa" type="number"/>
+                <div>
+                    <button type="button" onclick="agregarUnElemento()">Agregar elemento</button>
+                    <button type="button" onclick="calcularModa()">Calcula la moda</button>
+                </div>
+                <label for="" style="display: block;">Para eliminar un elemmento introdusca el numero de su posicion</label>
+                <button type="button" onclick="eliminarUnElemento()">Eliminar elemento</button>
             </form>
+            <ol id="ListaDeElementos"></ol>
         </section>
+        <p id="ResultModa"></p>
     </main>
-    <script src="./moda.js"></script>
+    <script src="../js/moda.js"></script>
 </body>
 </html>

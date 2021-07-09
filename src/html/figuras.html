@@ -13,19 +13,19 @@
         <nav>
             <div class="textContainer">
                 <a href="../../index.html">Inicio</a>
-                <p>Quefigura deseas calcular?</p>
+                <p>Que figura deseas calcular?</p>
             </div>
             <div class="buttonContainer">
-                <button type="button">Cuadrado</button>
-                <button type="button">Triangulo Equilatero</button>
-                <button type="button">Triangulo Isosceles</button>
-                <button type="button">Circulo</button>
+                <button type="button" class="elegirCalculadora" id="cuadrado">Cuadrado</button>
+                <button type="button" class="elegirCalculadora" id="trianguloE">Triangulo Equilatero</button>
+                <button type="button" class="elegirCalculadora" id="trianguloI">Triangulo Isosceles</button>
+                <button type="button" class="elegirCalculadora" id="circulo">Circulo</button>
             </div>
         </nav>
     </header>
     <main>
-        <section class="formularios">
-            <div class="formularios__cuadrado visible__cuadrado">
+        <section class="formulariosContainer">
+            <div class="formularios buscar formularios__cuadrado">
                 <h2>Calcula el area y perimetro de un cuadrado</h2>
                 <form action="">
                     <label for="InputCuadrado">Escribe cuanto mide cada lado de tu cuadrado</label>
@@ -37,7 +37,7 @@
                 </form>
             </div>
 
-            <div class="formularios__trianguloE visible__trianguloE">
+            <div class="formularios buscar formularios__trianguloE">
                 <h2>Calcula el area y perimetro de un triangulo equilatero</h2>
                 <form action="">
                     <label for="InputTrianguloE">Escribe cuanto mide cada lado de tu triangulo equilatero</label>
@@ -49,30 +49,40 @@
                 </form>
             </div>
 
-            <div class="formularios__trianguloI visible__trianguloI">
+            <div class="formularios buscar formularios__trianguloI">
                 <h2>Calcula el area y perimetro de un triangulo isoseles</h2>
                     <form action="">
                         <label for="InputTrianguloIL">Escribe cuanto mide cada lado de tu triangulo isoseles</label>
                         <input id="InputTrianguloIL" type="number" placeholder="lado1">
                         <input id="InputTrianguloIR" type="number" placeholder="lado2">
                         <input id="InputTrianguloIB" type="number" placeholder="base">
-                        <button type="button" onclick="calcularPerimetroTrianguloI()">Calcular perimetro</button>     
-                        <button type="button" onclick="calcularAreaTrianguloI()">Calcular area</button>
-                        <button type="button" onclick="calcularAlturaTrianguloI()">Calcular altura</button>
+                        <div>
+                            <button type="button" onclick="calcularPerimetroTrianguloI()">Calcular perimetro</button>     
+                            <button type="button" onclick="calcularAreaTrianguloI()">Calcular area</button>
+                            <button type="button" onclick="calcularAlturaTrianguloI()">Calcular altura</button>
+                        </div>
                     </form> 
             </div>
 
-            <div class="formularios__circulo visible__circulo">
+            <div class="formularios buscar formularios__circulo">
                 <h2>Calcula el area y perimetro de un circulo</h2>
                 <form action="">
                     <label for="Inputcirculo">Escribe cuanto mide el radio de tu circulo</label>
                     <input id="InputCirculo" type="number" placeholder="12">
-                    <button type="button" onclick="calcularPerimetroCirculo()">Calcular perimetro</button>     
-                    <button type="button" onclick="calcularAreaCirculo()">Calcular area</button>
+                    <div>
+                        <button type="button" onclick="calcularPerimetroCirculo()">Calcular perimetro</button>     
+                        <button type="button" onclick="calcularAreaCirculo()">Calcular area</button>
+                    </div>
                 </form>
             </div>
             
-            <p id="Results"></p>
+            <div class="resultados">
+                <p id="Results"></p>
+                <div class="buscar cuadrado formularios__cuadrado"></div>
+                <div class="buscar trianguloE formularios__trianguloE"></div>
+                <div class="buscar trianguloI formularios__trianguloI"></div>
+                <div class="buscar circulo formularios__circulo"></div>
+            </div>
         </section>
 
         

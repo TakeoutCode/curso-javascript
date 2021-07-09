@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salarios</title>
+    <link rel="stylesheet" href="../sass/styles.css">
 </head>
 <body>
-    <head>
-        <h1>Salarios</h1>
-    </head>
-    <main>
+    <header class="header-salarios">
+        <h1>Calculadora de mediana</h1>
+        <a href="../../index.html">Inicio</a>
+    </header>
+    <main class="main-salarios">
         <section>
-            <form action="">
-                <label for="">hola</label>
-                <input type="text">
+            <form action="" class="formulario-salarios">
+                <label for="InputSalarios">Introduce tu elemento</label>
+                <div class="formulario__input">
+                    <input id="InputNombre" type="text" placeholder="Braulio">
+                    <input id="InputSalarios" type="number" placeholder="124"/>
+                </div>
+                <div>
+                    <button type="button" onclick="agregarUnElemento()">Agregar elemento</button>
+                    <button type="button" onclick="calcularMediana()">Calcular mediana</button>
+                    <button type="button" onclick="calcularTop10()">Calcular top 10</button>
+                </div>
+                <label for="EliminarElemento" style="display: block;">Para eliminar un elemmento introdusca el numero de su posicion</label>
+                <input type="number" id="EliminarElemento" placeholder="1">
+                <button type="button" onclick="eliminarUnElemento()">Eliminar elemento</button>
             </form>
+            <ol id="ListaDeElementos"></ol>
         </section>
+        <p id="ResultSalarios"></p>
     </main>
-    <script src="./salarios.js"></script>
-    <script src="./analisis.js"></script>
+  
+    <script src="../js/analisis.js"></script>
 </body>
 </html>
 

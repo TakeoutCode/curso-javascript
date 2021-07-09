@@ -5,26 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mediana</title>
+    <link rel="stylesheet" href="../sass/styles.css">
 </head>
 <body>
-    <head>
-        <h1>Mediana</h1>
-    </head>
-    <main>
+    <header class="header-mediana">
+        <h1>Calculadora de mediana</h1>
+        <a href="../../index.html">Inicio</a>
+    </header>
+    <main class="main-mediana">
         <section>
-            <h2>Calcular la mediana</h2>
-            <form action="">
+            <form action="" class="formulario-mediana">
                 <label for="InputMediana">Introduce tu elemento</label>
-                <input id="InputMediana" type="number" style="display: block;"/>
-                <button type="button" onclick="agregarUnElemento()">Agregar elemento</button>
-                <button type="button" onclick="calcularMediana()">Calcula la mediana</button>
+                <input id="InputMediana" type="number"/>
+                <div>
+                    <button type="button" onclick="agregarUnElemento()">Agregar elemento</button>
+                    <button type="button" onclick="calcularMediana()">Calcula la mediana</button>
+                </div>
                 <label for="" style="display: block;">Para eliminar un elemmento introdusca el numero de su posicion</label>
                 <button type="button" onclick="eliminarUnElemento()">Eliminar elemento</button>
             </form>
             <ol id="ListaDeElementos"></ol>
-            <p id="ResultMeadiana"></p>
         </section>
+        <p id="ResultMediana"></p>
     </main>
-    <script src="./mediana.js"></script>
+    <script src="../js/mediana.js"></script>
 </body>
 </html>
